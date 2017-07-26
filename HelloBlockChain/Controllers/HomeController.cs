@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloBlockChain.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace HelloBlockChain.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
+            ViewBag.ClientName = Constants.ClientName;
 
             return View();
         }
