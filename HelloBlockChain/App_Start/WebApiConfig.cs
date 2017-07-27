@@ -15,6 +15,12 @@ namespace HelloBlockChain
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "UnspentApi",
+                routeTemplate: "api/unspent/{name}",
+                defaults: new { controller = "unspent" }
+            );
+            
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
